@@ -17,5 +17,5 @@ class Customer(Base):
     time = Column(String(250), nullable=False)           # Customer Appointment Time
 
 
-engine = create_engine('sqlite:///sqlalchemy_customer.db')
+engine = create_engine('sqlite:///customer.db', echo = True)
 Base.metadata.create_all(engine)
